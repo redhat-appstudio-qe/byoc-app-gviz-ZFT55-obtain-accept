@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: foxp
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: foxp
+    app.kubernetes.io/part-of: byoc-app-gviz
+  name: foxp
+spec:
+  rules:
+  - host: foxp-byoc-ztsw-tenant.apps.1f5bed05908e82927635.hypershift.aws-2.ci.openshift.org
+    http:
+      paths:
+      - backend:
+          service:
+            name: foxp
+            port:
+              number: 8081
+        path: /
+        pathType: ImplementationSpecific
+status:
+  loadBalancer: {}
