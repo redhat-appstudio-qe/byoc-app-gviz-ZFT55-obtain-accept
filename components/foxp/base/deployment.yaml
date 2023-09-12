@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: foxp
     spec:
       containers:
-      - image: java-quarkus-image:latest
+      - image: quay.io/redhat-appstudio-qe/byoc-ztsw-tenant/byoc-app-gviz/foxp@sha256:632e19cd1afe7444e6c2cdace8424422ea34006c9a746ca4cf02b60ed7079c31
         name: my-java-quarkus
         ports:
         - containerPort: 8081
